@@ -86,13 +86,19 @@ export default function ChatClient({ session }: Props) {
       </main>
     )
   }
-
+  
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900 p-4">
       <Card className="w-full max-w-md mx-auto flex flex-col h-[90vh] md:h-[80vh] shadow-lg rounded-lg">
-        <CardHeader className="border-b dark:border-gray-700">
-          <CardTitle className="text-center text-xl font-bold dark:text-white">Welcome, {session.user.name}</CardTitle>
-        </CardHeader>
+        <CardHeader className="border-b dark:border-gray-700 flex items-center justify-between px-4 py-2">
+  <CardTitle className="text-xl font-bold dark:text-white">Hi, {session.user.name}</CardTitle>
+  <a href="/auth/logout">
+    <Button className="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded text-sm">
+      Logout
+    </Button>
+  </a>
+</CardHeader>
+
         <CardContent className="flex-1 overflow-hidden p-4">
           <ScrollArea className="h-full pr-4" ref={scrollAreaRef}>
             {messages.length === 0 && (
