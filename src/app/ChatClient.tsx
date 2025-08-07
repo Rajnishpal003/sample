@@ -76,13 +76,14 @@ export default function ChatClient({ session }: Props) {
 
   if (!session) {
     return (
-       <main className="flex items-center justify-center min-h-screen bg-gray-100">
+      <main className="flex items-center justify-center min-h-screen bg-gray-100 bg-cover bg-center"
+  style={{ backgroundImage: `url('/images/img.png')` }}>
       <div className="bg-white shadow-lg rounded-lg p-8 w-full max-w-md text-center">
         <h1 className="text-3xl font-bold mb-6 text-gray-800">Welcome</h1>
         <p className="mb-8 text-gray-600">Please log in or create an account to continue</p>
         <div className="flex flex-col gap-4">
           <a href="/auth/login?screen_hint=signup">
-            <button className="w-full bg-blue-200 hover:bg-blue-300 text-white font-semibold py-2 px-4 rounded">
+            <button className="w-full bg-blue-200 hover:bg-blue-300 text-gray-800 font-semibold py-2 px-4 rounded">
               Sign Up
             </button>
           </a>
