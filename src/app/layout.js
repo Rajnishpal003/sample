@@ -7,7 +7,7 @@ import { TRPCProvider } from '../components/trpc-provider' // ✅ make sure this
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Zoro,Ai',
+  title: 'Zoro.Ai',
   description: 'Created by Rajnish Pal Singh',
 }
 
